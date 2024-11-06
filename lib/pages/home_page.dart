@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  final int days = 5;
+  final int days = 4;
   final String name = "Codepur";
 
   @override
@@ -9,6 +9,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalog App"),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Container(
