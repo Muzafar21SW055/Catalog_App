@@ -6,5 +6,22 @@ class Item {
   final String color;
   final String image;
 
-  Item(this.id, this.name, this.desc, this.price, this.color, this.image);
+  Item(
+      {required this.id,
+      required this.name,
+      required this.desc,
+      required this.price,
+      required this.color,
+      required this.image});
 }
+
+final products = [
+  Item(
+      id: "Patternista001",
+      name: "iPhone 16 Pro Max",
+      desc:
+          "Apple's top-tier iPhone with powerful performance and improved camera",
+      price: 1299,
+      color: "#1C1C1E",
+      image: "https://example.com/iphone16promax.jpg")
+];
