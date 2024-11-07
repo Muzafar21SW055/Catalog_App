@@ -58,6 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: [
                       TextFormField(
+                        style: TextStyle(color: Colors.cyan[700]),
                         decoration: InputDecoration(
                           hintText: "Enter Username",
                           labelText: "Username",
@@ -92,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 20.0,
                       ),
                       Material(
-                        color: Colors.deepPurple,
+                        color: Colors.cyan[400],
                         borderRadius:
                             BorderRadius.circular(changeButton ? 25 : 8),
                         child: InkWell(

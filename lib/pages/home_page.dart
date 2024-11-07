@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learningdart/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   final int days = 4;
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Catalog App"),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.cyan[600],
         foregroundColor: Colors.white,
       ),
       body: Center(
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
           child: Text("Learning Flutter in $days Days with $name ."),
         ),
       ),
-      drawer: const Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
