@@ -4,11 +4,13 @@ class HomePage extends StatelessWidget {
   final int days = 4;
   final String name = "Codepur";
 
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalog App"),
+        title: const Text("Catalog App"),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
@@ -17,7 +19,7 @@ class HomePage extends StatelessWidget {
           child: Text("Learning Flutter in $days Days with $name ."),
         ),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
