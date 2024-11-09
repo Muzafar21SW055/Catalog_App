@@ -1,7 +1,7 @@
 {
     "products": [
       {
-        "id": "Patternista001",
+        "id": 1,
         "name": "iPhone 16 Pro Max",
         "desc": "Apple's top-tier iPhone with powerful performance and improved camera",
         "price": 1299,
@@ -9,7 +9,7 @@
         "image": "https://qmart.pk/cdn/shop/files/Apple-iPhone-16-Pro-Qmart-2.jpg?v=1726140072"
       },
       {
-        "id": "Patternista002",
+        "id": 2,
         "name": "Samsung Galaxy S24 Ultra",
         "desc": "Flagship Samsung with advanced camera and S Pen support",
         "price": 1199,
@@ -17,7 +17,7 @@
         "image": "https://eezepc.com/wp-content/uploads/2024/02/Samsung-Galaxy-S24-Ultra-EEZEPC-price-in-pakistan-titanium-grey-1.webp"
       },
       {
-        "id": "Patternista003",
+        "id": 3,
         "name": "Google Pixel 9 Pro",
         "desc": "Google's AI-powered smartphone with excellent camera features",
         "price": 999,
@@ -25,7 +25,7 @@
         "image": "https://cdn.dxomark.com/wp-content/uploads/medias/post-176677/Google-Pixel-9-Pro-XL_featured-image-packshot-review.png"
       },
       {
-        "id": "Patternista004",
+        "id": 4,
         "name": "OnePlus 12 Pro",
         "desc": "High-speed and stylish OnePlus flagship with 120Hz display",
         "price": 899,
@@ -33,7 +33,7 @@
         "image": "https://pk-live-21.slatic.net/kf/S20d0af9eee464a5ebf0bcbbcef8d5457Q.jpg"
       },
       {
-        "id": "Patternista005",
+        "id": 5,
         "name": "Sony Xperia 1 VI",
         "desc": "Premium Sony phone with impressive 4K OLED display",
         "price": 1199,
@@ -41,7 +41,7 @@
         "image": "https://m.media-amazon.com/images/I/51nfiDXOOqL.jpg"
       },
       {
-        "id": "Patternista006",
+        "id": 6,
         "name": "Huawei Mate 60 Pro",
         "desc": "Feature-packed Huawei flagship with advanced processing",
         "price": 1099,
@@ -49,7 +49,7 @@
         "image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/mate60pronoglobal96.jpg"
       },
       {
-        "id": "Patternista007",
+        "id": 7,
         "name": "Xiaomi 14 Ultra",
         "desc": "Xiaomi's high-end device with powerful camera setup",
         "price": 899,
@@ -57,7 +57,7 @@
         "image": "https://retail.com.pk/cdn/shop/files/x14ultra-f.jpg?v=1709179262"
       },
       {
-        "id": "Patternista008",
+        "id": 8,
         "name": "Oppo Find X6 Pro",
         "desc": "Oppo's latest flagship with superior display quality",
         "price": 849,
@@ -65,7 +65,7 @@
         "image": "https://miro.medium.com/v2/resize:fit:1080/1*C4_6OT-Agq2rzHmktk4o0w.jpeg"
       },
       {
-        "id": "Patternista009",
+        "id": 9,
         "name": "Vivo X100 Pro",
         "desc": "Vivo's advanced model with standout photography",
         "price": 899,
@@ -73,7 +73,7 @@
         "image": "https://spec.pk/wp-content/uploads/2023/12/Vivo-X100-Pro.jpg"
       },
       {
-        "id": "Patternista010",
+        "id": 10,
         "name": "Realme GT5 Pro",
         "desc": "High-performance Realme with fast charging and sleek design",
         "price": 799,
@@ -81,7 +81,7 @@
         "image": "https://images.fonearena.com/blog/wp-content/uploads/2023/12/realme-GT5-Pro-colors-1024x742.jpg"
       },
       {
-        "id": "Patternista011",
+        "id": 11,
         "name": "Motorola Edge 40 Pro",
         "desc": "Motorola's flagship with a smooth OLED display and robust battery",
         "price": 699,
@@ -89,7 +89,7 @@
         "image": "https://motorolaroe.vtexassets.com/arquivos/ids/157285/motorola-edge-40-pro-family-shelf-quartz-black-b5pgv2pv.png?v=638162154256500000"
       },
       {
-        "id": "Patternista012",
+        "id": 12,
         "name": "Asus ROG Phone 8",
         "desc": "Top gaming phone with high refresh rate display",
         "price": 1099,
@@ -97,7 +97,7 @@
         "image": "https://eezepc.com/wp-content/uploads/2024/03/ASUS-ROG-Phone-8-Gray-price-in-pakistan-eezepc-1.jpg"
       },
       {
-        "id": "Patternista013",
+        "id": 13,
         "name": "Nothing Phone 3",
         "desc": "Unique design with a transparent back and LED lights",
         "price": 699,
@@ -105,7 +105,7 @@
         "image": "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2023/07/nothing-scaled-1.webp?size=*:900"
       },
       {
-        "id": "Patternista014",
+        "id": 14,
         "name": "Samsung Galaxy Z Fold 6",
         "desc": "Samsung's latest foldable with improved durability",
         "price": 1799,
@@ -113,7 +113,7 @@
         "image": "https://images.samsung.com/is/image/samsung/p6pim/pk/sm-f956bakgpkd/gallery/pk-galaxy-z-fold6-f956-519772-sm-f956bakgpkd-543086704?$650_519_PNG$"
       },
       {
-        "id": "Patternista015",
+        "id": 15,
         "name": "iPhone 16",
         "desc": "Apple's solid entry-level flagship with powerful performance",
         "price": 999,
@@ -121,7 +121,7 @@
         "image": "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/geo/Apple-iPhone-16-hero-geo-240909_inline.jpg.large.jpg"
       },
       {
-        "id": "Patternista016",
+        "id": 16,
         "name": "Google Pixel 8a",
         "desc": "Affordable Pixel with reliable performance and camera",
         "price": 499,
@@ -129,7 +129,7 @@
         "image": "https://jumbotech.pk/cdn/shop/files/pixel-1.webp?v=1720067318"
       },
       {
-        "id": "Patternista017",
+        "id": 17,
         "name": "Redmi Note 13 Pro",
         "desc": "High-value budget phone with powerful specs for the price",
         "price": 499,
@@ -137,7 +137,7 @@
         "image": "https://eezepc.com/wp-content/uploads/2024/01/Redmi-Note-13-Pro-Green-price-in-pakistan-eezepc-1.webp"
       },
       {
-        "id": "Patternista018",
+        "id": 18,
         "name": "Honor Magic 6 Pro",
         "desc": "Sleek and stylish phone with excellent photography",
         "price": 749,
@@ -145,7 +145,7 @@
         "image": "https://explorehonor.com/cdn/shop/files/magic6-pro-black-1_2000x.jpg?v=1722237754"
       },
       {
-        "id": "Patternista019",
+        "id": 19,
         "name": "Lenovo Legion Phone 3",
         "desc": "Gaming phone with a large battery and gaming features",
         "price": 999,
@@ -153,7 +153,7 @@
         "image": "https://www.notebookcheck.net/fileadmin/_processed_/b/3/csm_Untitled5932_1e4beb1897.png"
       },
       {
-        "id": "Patternista020",
+        "id": 20,
         "name": "Sony Xperia 5 V",
         "desc": "Compact Sony model with top-quality display and camera",
         "price": 799,
