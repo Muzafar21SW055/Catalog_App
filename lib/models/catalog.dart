@@ -23,5 +23,5 @@ final products = [
           "Apple's top-tier iPhone with powerful performance and improved camera",
       price: 1299,
       color: "#1C1C1E",
-      image: "https://example.com/iphone16promax.jpg")
+      image: "https://qmart.pk/cdn/shop/files/Apple-iPhone-16-Pro-Qmart-2.jpg?v=1726140072")
 ];
