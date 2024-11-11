@@ -14,7 +14,7 @@ class CatalogImage extends StatelessWidget {
         .width(123)
         .p8
         .roundedLg
-        .color(Color.fromARGB(255, 245, 245, 224))
+        .color(context.canvasColor)
         .make()
         .p8()
         .w32(context);

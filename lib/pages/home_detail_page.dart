@@ -18,9 +18,11 @@ class HomeDetailPage extends StatelessWidget {
       top: false,
       bottom: false, //top & bottom to remove safeArea blackspace.
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+        ),
         bottomNavigationBar: Container(
-          color: Colors.white,
+          color: context.cardColor,
           child: ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,
             buttonPadding: EdgeInsets.zero,
@@ -32,15 +34,16 @@ class HomeDetailPage extends StatelessWidget {
                 },
                 style: ButtonStyle(
                   foregroundColor:
-                      MaterialStateProperty.all(MyTheme.creamColor),
-                  backgroundColor: MaterialStateProperty.all(MyTheme.darkblue),
+                      MaterialStateProperty.all(context.colors.primary),
+                  backgroundColor:
+                      MaterialStateProperty.all(context.colors.secondary),
                 ),
                 child: Icon(CupertinoIcons.cart_fill_badge_plus).iconSize(30.0),
               ).wh(80, 50)
             ],
           ).p32(),
         ),
-        backgroundColor: const Color.fromARGB(255, 245, 245, 224),
+        backgroundColor: context.canvasColor,
         body: Column(
           children: [
             Hero(
@@ -55,17 +58,18 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.convey,
               edge: VxEdge.top,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
                     catalog.name!.text.xl3
-                        .color(MyTheme.darkblue)
+                        .color(context.colors.secondary)
                         .bold
                         .make()
                         .py8(),
                     6.heightBox,
                     catalog.desc!.text
+                        .color(context.colors.secondary)
                         .textStyle(context.captionStyle)
                         .light
                         .make()
@@ -73,6 +77,7 @@ class HomeDetailPage extends StatelessWidget {
                     10.heightBox,
                     "Amet ea ea est et ipsum et sed. Sadipscing invidunt rebum eos sanctus sea, sed diam vero voluptua ut dolores. Dolor erat gubergren voluptua sanctus kasd dolores diam aliquyam. Diam stet consetetur et magna magna, aliquyam ut consetetur justo magna diam tempor sit, ut amet magna magna sed voluptua accusam labore ea sadipscing, labore erat gubergren ipsum rebum sed voluptua diam vero eos, diam sed dolores invidunt invidunt et ea, magna duo ipsum et et eirmod ipsum takimata sed. Dolor."
                         .text
+                        .color(context.colors.secondary)
                         .textStyle(context.captionStyle)
                         .make()
                         .px12(),

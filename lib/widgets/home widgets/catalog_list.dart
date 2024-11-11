@@ -53,21 +53,33 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              catalog.name!.text.light.color(MyTheme.darkblue).bold.make(),
-              catalog.desc!.text.xs.textStyle(context.captionStyle).make(),
+              catalog.name!.text.light
+                  .color(context.colors.secondary)
+                  .bold
+                  .make(),
+              catalog.desc!.text
+                  .color(context.colors.secondary)
+                  .xs
+                  .textStyle(context.captionStyle)
+                  .make(),
               7.heightBox,
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding: EdgeInsets.zero,
                 children: [
-                  "\$${catalog.price}".text.xl.bold.make(),
+                  "\$${catalog.price}"
+                      .text
+                      .color(context.colors.secondary)
+                      .xl
+                      .bold
+                      .make(),
                   ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(MyTheme.darkblue),
+                          MaterialStateProperty.all(context.colors.secondary),
                       foregroundColor:
-                          MaterialStateProperty.all(MyTheme.creamColor),
+                          MaterialStateProperty.all(context.colors.primary),
                     ),
                     child: Icon(CupertinoIcons.cart_fill_badge_plus)
                         .iconSize(25.0),
@@ -78,6 +90,6 @@ class CatalogItem extends StatelessWidget {
           ),
         )
       ],
-    )).white.roundedLg.square(150).make().py16();
+    )).color(context.cardColor).roundedLg.square(150).make().py16();
   }
 }
