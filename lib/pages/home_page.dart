@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:learningdart/models/catalog.dart';
+import 'package:learningdart/utils/routes.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_header.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_list.dart';
+import 'package:learningdart/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
@@ -40,6 +43,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     //final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: MyTheme.creamColor,
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        child: Icon(CupertinoIcons.cart_fill),
+      ),
       backgroundColor: const Color.fromARGB(255, 245, 245, 224),
       body: SafeArea(
         child: Container(

@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learningdart/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -6,11 +7,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:learningdart/models/catalog.dart';
 
 class HomeDetailPage extends StatelessWidget {
-  // const HomeDetailPage({
-  //   Key? key,
-  //   required this.catalog,
-  // }) : super(key: key);
-
   final Item catalog;
   String user = "Muzafar";
 
@@ -32,13 +28,15 @@ class HomeDetailPage extends StatelessWidget {
               "\$${catalog.price}".text.xl4.bold.color(Colors.red[800]).make(),
               ElevatedButton(
                 onPressed: () {
-                  print("$user wants to buy ${catalog.name}");
+                  print("$user added ${catalog.name} to cart");
                 },
                 style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all(MyTheme.creamColor),
                   backgroundColor: MaterialStateProperty.all(MyTheme.darkblue),
                 ),
-                child: "Buy".text.xl.bold.color(MyTheme.creamColor).make(),
-              ).wh(120, 40)
+                child: Icon(CupertinoIcons.cart_fill_badge_plus).iconSize(30.0),
+              ).wh(80, 50)
             ],
           ).p32(),
         ),
@@ -70,6 +68,12 @@ class HomeDetailPage extends StatelessWidget {
                     catalog.desc!.text
                         .textStyle(context.captionStyle)
                         .light
+                        .make()
+                        .px12(),
+                    10.heightBox,
+                    "Amet ea ea est et ipsum et sed. Sadipscing invidunt rebum eos sanctus sea, sed diam vero voluptua ut dolores. Dolor erat gubergren voluptua sanctus kasd dolores diam aliquyam. Diam stet consetetur et magna magna, aliquyam ut consetetur justo magna diam tempor sit, ut amet magna magna sed voluptua accusam labore ea sadipscing, labore erat gubergren ipsum rebum sed voluptua diam vero eos, diam sed dolores invidunt invidunt et ea, magna duo ipsum et et eirmod ipsum takimata sed. Dolor."
+                        .text
+                        .textStyle(context.captionStyle)
                         .make()
                         .px12(),
                   ],

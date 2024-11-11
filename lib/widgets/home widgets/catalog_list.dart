@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learningdart/models/catalog.dart';
 import 'package:learningdart/pages/home_detail_page.dart';
@@ -61,12 +62,16 @@ class CatalogItem extends StatelessWidget {
                 children: [
                   "\$${catalog.price}".text.xl.bold.make(),
                   ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(MyTheme.darkblue),
-                      ),
-                      child: "Buy".text.bold.color(MyTheme.creamColor).make())
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(MyTheme.darkblue),
+                      foregroundColor:
+                          MaterialStateProperty.all(MyTheme.creamColor),
+                    ),
+                    child: Icon(CupertinoIcons.cart_fill_badge_plus)
+                        .iconSize(25.0),
+                  )
                 ],
               ).pOnly(top: 10.0, right: 15.0)
             ],
