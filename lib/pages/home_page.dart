@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:learningdart/models/catalog.dart';
 import 'package:learningdart/utils/routes.dart';
+import 'package:learningdart/widgets/drawer.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_header.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_list.dart';
 import 'package:learningdart/widgets/themes.dart';
@@ -47,12 +48,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: context.colors.secondary,
         foregroundColor: context.colors.primary,
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-        child: Icon(CupertinoIcons.cart_fill),
-      ),
+        child: Icon(CupertinoIcons.cart_fill).iconSize(35),
+      ).px12().w24(context),
       backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(
-          padding: Vx.m32,
+          padding: Vx.m20,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

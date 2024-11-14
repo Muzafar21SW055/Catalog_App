@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learningdart/models/cart_model.dart';
 import 'package:learningdart/pages/home_detail_page.dart';
 import 'package:learningdart/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -31,12 +32,19 @@ class _CartTotal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = CartModel();
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "Total: \$9999".text.xl4.color(context.colors.secondary).make().p20(),
+          "\$${_cart.totalPrice}"
+              .text
+              .xl4
+              .color(context.colors.secondary)
+              .make()
+              .px8(),
+          30.widthBox,
           ElevatedButton(
             style: ButtonStyle(
               foregroundColor:
@@ -67,14 +75,19 @@ class _CartList extends StatefulWidget {
 }
 
 class __CartListState extends State<_CartList> {
+  final _cart = CartModel();
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5,
+      itemCount: _cart.items.length,
       itemBuilder: (context, index) => ListTile(
           leading: IconButton(
             color: context.colors.secondary,
-            onPressed: () {},
+            onPressed: () {
+              isChecked = isChecked.toggle();
+              setState(() {});
+            },
             icon: Icon(Icons.check_box_outlined),
           ),
           trailing: IconButton(
@@ -83,7 +96,7 @@ class __CartListState extends State<_CartList> {
             icon: Icon(Icons.remove_circle_outline_outlined),
           ),
           title: Text(
-            "Item 1",
+            _cart.items[index].name!,
             style: TextStyle(color: context.colors.secondary),
           )),
     );
