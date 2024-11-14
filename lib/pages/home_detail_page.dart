@@ -6,6 +6,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 import 'package:learningdart/models/catalog.dart';
 
+// ignore: must_be_immutable
 class HomeDetailPage extends StatelessWidget {
   final Item catalog;
   String user = "Muzafar";

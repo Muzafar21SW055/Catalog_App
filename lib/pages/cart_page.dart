@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learningdart/core/store.dart';
 import 'package:learningdart/models/cart_model.dart';
-import 'package:learningdart/models/catalog.dart';
-import 'package:learningdart/widgets/home%20widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
