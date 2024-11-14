@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
+
 class CatalogModel {
   static List<Item> items = [
     // Item(
@@ -15,10 +17,17 @@ class CatalogModel {
     //   //description: "",
     // )
   ];
+
+  // get items by id
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  //get items by position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
-  final num? id;
+  num? id;
   final String? name;
   final String? desc;
   final num? price;
