@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learningdart/pages/home_detail_page.dart';
 import 'package:learningdart/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 

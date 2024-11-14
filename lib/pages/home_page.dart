@@ -4,10 +4,8 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:learningdart/models/catalog.dart';
 import 'package:learningdart/utils/routes.dart';
-import 'package:learningdart/widgets/drawer.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_header.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_list.dart';
-import 'package:learningdart/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
@@ -49,7 +47,7 @@ class _HomePageState extends State<HomePage> {
         foregroundColor: context.colors.primary,
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
         child: Icon(CupertinoIcons.cart_fill).iconSize(35),
-      ).px12().w24(context),
+      ).w16(context),
       backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(

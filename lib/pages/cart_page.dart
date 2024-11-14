@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learningdart/models/cart_model.dart';
-import 'package:learningdart/pages/home_detail_page.dart';
-import 'package:learningdart/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
@@ -79,26 +77,31 @@ class __CartListState extends State<_CartList> {
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: _cart.items.length,
-      itemBuilder: (context, index) => ListTile(
-          leading: IconButton(
-            color: context.colors.secondary,
-            onPressed: () {
-              isChecked = isChecked.toggle();
-              setState(() {});
-            },
-            icon: Icon(Icons.check_box_outlined),
-          ),
-          trailing: IconButton(
-            color: context.colors.secondary,
-            onPressed: () {},
-            icon: Icon(Icons.remove_circle_outline_outlined),
-          ),
-          title: Text(
-            _cart.items[index].name!,
-            style: TextStyle(color: context.colors.secondary),
-          )),
-    );
+    return _cart.items.isEmpty
+        ? "Cart is Empty".text.bold.xl2.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+                leading: IconButton(
+                  color: context.colors.secondary,
+                  onPressed: () {
+                    isChecked = isChecked.toggle();
+                    setState(() {});
+                  },
+                  icon: Icon(Icons.check_box_outlined),
+                ),
+                trailing: IconButton(
+                  color: context.colors.secondary,
+                  onPressed: () {
+                    _cart.remove(_cart.items[index]);
+                    setState(() {});
+                  },
+                  icon: Icon(Icons.remove_circle_outline_outlined),
+                ),
+                title: Text(
+                  _cart.items[index].name!,
+                  style: TextStyle(color: context.colors.secondary),
+                )),
+          );
   }
 }
