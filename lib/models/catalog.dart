@@ -4,26 +4,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class CatalogModel {
-  static List<Item> items = [
-    // Item(
-    //   id: 1,
-    //   name: "iPhone 16 Pro Max",
-    //   desc:
-    //       "Apple's top-tier iPhone with powerful performance and improved camera.",
-    //   price: 1299,
-    //   color: "#1C1C1E",
-    //   image:
-    //       "https://qmart.pk/cdn/shop/files/Apple-iPhone-16-Pro-Qmart-2.jpg?v=1726140072",
-    //   //description: "",
-    // )
-  ];
+  static List<Item> items = [];
 
   // get items by id
-  static Item getById(int id) =>
+  Item getById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
 
   //get items by position
-  static Item getByPosition(int pos) => items[pos];
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

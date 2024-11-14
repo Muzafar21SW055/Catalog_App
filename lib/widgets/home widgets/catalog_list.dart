@@ -15,7 +15,7 @@ class CatalogList extends StatelessWidget {
         shrinkWrap: true,
         itemCount: CatalogModel.items.length,
         itemBuilder: (context, index) {
-          final catalog = CatalogModel.getByPosition(index);
+          final catalog = CatalogModel.items[index];
           return InkWell(
               onTap: () => Navigator.push(
                     context,
@@ -83,12 +83,12 @@ class CatalogItem extends StatelessWidget {
                     ),
                     child: Icon(CupertinoIcons.cart_fill_badge_plus)
                         .iconSize(25.0),
-                  )
+                  ),
                 ],
               ).pOnly(top: 10.0, right: 15.0)
             ],
           ),
-        )
+        ),
       ],
     )).color(context.cardColor).roundedLg.square(150).make().py16();
   }
