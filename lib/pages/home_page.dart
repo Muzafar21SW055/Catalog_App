@@ -78,12 +78,12 @@ class _HomePageState extends State<HomePage> {
               if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                 CatalogList().expand()
               else
-                CircularProgressIndicator().centered().expand()
+                LinearProgressIndicator().centered().expand()
             ],
           ),
         ),
       ),
-         drawer: MyDrawer(),
+      drawer: MyDrawer(),
     );
   }
 }
