@@ -31,6 +31,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      top: false,
       bottom: false,
       child: Material(
           color: context.canvasColor,
@@ -41,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 0.0), // Adds 40px padding at the top
+                        top: 60.0), // Adds 40px padding at the top
                     child: Image.asset(
                       "assets/images/login_image.png",
                       fit: BoxFit.contain, // Prevents stretching

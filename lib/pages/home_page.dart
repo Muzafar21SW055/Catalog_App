@@ -6,6 +6,7 @@ import 'package:learningdart/models/cart_model.dart';
 import 'dart:convert';
 import 'package:learningdart/models/catalog.dart';
 import 'package:learningdart/utils/routes.dart';
+import 'package:learningdart/widgets/drawer.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_header.dart';
 import 'package:learningdart/widgets/home%20widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
     loadData();
   }
 
-loadData() async {
+  loadData() async {
     await Future.delayed(Duration(seconds: 2));
     final catalogJSON =
         await rootBundle.loadString("assets/files/catalog.json");
@@ -45,9 +46,6 @@ loadData() async {
         List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
     setState(() {});
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +83,7 @@ loadData() async {
           ),
         ),
       ),
+         drawer: MyDrawer(),
     );
   }
 }

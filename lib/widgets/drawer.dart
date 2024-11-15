@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learningdart/core/store.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -10,7 +12,7 @@ class MyDrawer extends StatelessWidget {
 
     return Drawer(
       child: Container(
-        color: Colors.cyan[600],
+        color: context.colors.secondary,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -19,10 +21,23 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
                 decoration: BoxDecoration(
-                  color: Colors.cyan[600],
+                  color: context.colors.primary,
                 ),
-                accountName: Text("Muzafar Ibrahim"),
-                accountEmail: Text("muzafarmahar9@gmail.com"),
+                accountName: Text(
+                  'Muzafar Ibrahim',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: context.colors.secondary,
+                  ),
+                ),
+                accountEmail: Text(
+                  'muzafarmahar9@gmail.com',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: context.colors.secondary,
+                  ),
+                ),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imageUrl),
                 ),
@@ -31,56 +46,56 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(
                 CupertinoIcons.home,
-                color: Colors.white,
+                color: context.colors.primary,
               ),
               title: Text(
                 "Home",
                 textScaleFactor: 1.2,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.colors.primary),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.square_stack_3d_down_right_fill,
-                color: Colors.white,
+                color: context.colors.primary,
               ),
               title: Text(
                 "Products",
                 textScaleFactor: 1.2,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.colors.primary),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.cart,
-                color: Colors.white,
+                color: context.colors.primary,
               ),
               title: Text(
                 "Cart",
                 textScaleFactor: 1.2,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.colors.primary),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.settings,
-                color: Colors.white,
+                color: context.colors.primary,
               ),
               title: Text(
                 "Settings",
                 textScaleFactor: 1.2,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.colors.primary),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.profile_circled,
-                color: Colors.white,
+                color: context.colors.primary,
               ),
               title: Text(
                 "Profile",
                 textScaleFactor: 1.2,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.colors.primary),
               ),
             ),
           ],
